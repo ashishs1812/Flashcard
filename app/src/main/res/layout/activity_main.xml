@@ -34,12 +34,24 @@
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="400sp"
+        android:layout_height="260dp"
         android:layout_alignTop="@+id/flashcard_question"
         android:layout_alignParentStart="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="101dp"
         android:alpha="0.0"
         android:visibility="visible" />
+
+
+
+    <ImageButton
+        android:id="@+id/addButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="41dp"
+        android:src="@drawable/plus" />
 
 </RelativeLayout>
