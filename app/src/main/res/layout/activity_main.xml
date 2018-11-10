@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="What is the capitol city of Texas?"
+        android:text="Add a card!"
         android:textAlignment="center"
         android:textSize="40sp" />
 
@@ -26,19 +26,18 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:gravity="center"
-        android:text="Austin"
         android:textAlignment="center"
         android:textSize="40sp"
         android:visibility="invisible" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:layout_alignTop="@+id/flashcard_question"
+        android:layout_width="256dp"
+        android:layout_height="398dp"
+        android:layout_above="@+id/addButton"
         android:layout_alignParentStart="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="101dp"
+        android:layout_marginBottom="-141dp"
         android:alpha="0.0"
         android:visibility="visible" />
 
@@ -53,5 +52,28 @@
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="41dp"
         android:src="@drawable/plus" />
+
+    <ImageButton
+        android:id="@+id/next_button"
+        android:layout_width="101dp"
+        android:layout_height="85dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="292dp"
+        android:src="@drawable/next"
+        android:text="Button" />
+
+    <ImageButton
+        android:id="@+id/trash_button"
+        android:layout_width="101dp"
+        android:layout_height="85dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="173dp"
+        android:src="@drawable/trash"
+        android:text="Button" />
+
 
 </RelativeLayout>
