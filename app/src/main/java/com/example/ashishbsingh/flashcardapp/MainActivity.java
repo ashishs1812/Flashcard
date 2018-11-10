@@ -99,23 +99,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 flashcardDatabase.deleteCard(((TextView)findViewById(R.id.flashcard_question)).getText().toString());
+                allFlashcards = flashcardDatabase.getAllCards();
                 if(allFlashcards.size() == 0){
                     currentCardDisplayedIndex = 0;
-                    allFlashcards = flashcardDatabase.getAllCards();
                     (findViewById(R.id.flashcard_question)).setVisibility(View.VISIBLE);
                     (findViewById(R.id.flashcard_answer)).setVisibility(View.INVISIBLE);
                     ((TextView) findViewById(R.id.flashcard_question)).setText("Add a card!");
                 }
                 else if(allFlashcards.size() - 1 < currentCardDisplayedIndex) {
                     currentCardDisplayedIndex = 0;
-                    allFlashcards = flashcardDatabase.getAllCards();
                     ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(currentCardDisplayedIndex).getQuestion());
                     ((TextView) findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
                     (findViewById(R.id.flashcard_question)).setVisibility(View.VISIBLE);
                     (findViewById(R.id.flashcard_answer)).setVisibility(View.INVISIBLE);
                 }
                 else{
-                    allFlashcards = flashcardDatabase.getAllCards();
                     ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(currentCardDisplayedIndex).getQuestion());
                     ((TextView) findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
                     (findViewById(R.id.flashcard_question)).setVisibility(View.VISIBLE);
