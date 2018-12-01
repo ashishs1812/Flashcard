@@ -30,7 +30,11 @@ public class AddCardActivity extends AppCompatActivity {
         findViewById(R.id.cancelButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View b) {
+                Intent intent = new Intent(AddCardActivity.this, MainActivity.class);
+                AddCardActivity.this.startActivityForResult(intent, 10);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
                finish();
+
 
 
 
